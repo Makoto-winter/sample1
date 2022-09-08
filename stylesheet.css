@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #383e45;
+  font-size: 0.9rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+Header
+-------------------------------------------*/
+.site-title {
+  width: 120px;
+  padding: 10px 0;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+#header ul {
+  display: flex;
+  padding: 10px 0;
+}
+#header li {
+  margin-left: 30px;
+}
+#header li a {
+  color: #24292e;
+}
+#header li a:hover {
+  opacity: 0.7;
+}
+#header li img.icon {
+  width: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .site-title {
+    padding: 10px 0 0 0;
+  }
+  #header {
+    flex-direction: column;
+    padding:10px 10px;
+  }
+  #header ul {
+    padding: 0 0 10px 0;
+  }
+  #header li {
+    margin-left: 20px;
+  }
+}
+
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
+  margin-bottom: 80px;
+}
+#mainvisual .image-pc {
+  width: 100%;
+  max-width: 1920px;
+  height: 400px;
+  object-fit: cover;
+}
+#mainvisual .image-sp{
+  display:none;
+}
+
+@media screen and (max-width: 600px) {
+  #mainvisual .image-pc{
+    display:none;
+  }
+  #mainvisual .image-sp{
+    display:block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+  }
+}
+
+/*-------------------------------------------
+About
+-------------------------------------------*/
+#about .content {
+  text-align: left;
+}
+
+
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#Works ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+#Works li {
+  width: 33.3%;
+  padding:10px;
+}
+@media screen and (max-width: 600px){
+  #Works ul{
+    flex-direction: column;
+  }
+  #Works li {
+  width:100%;
+  padding:10px 0;
+  }
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+
+#News dl{
+  display: flex;
+  flex-wrap:wrap;
+
+  text-align: left;
+  border-top: 1px solid #383e45;
+  
+}
+#News dt{
+  width:20%;
+  padding: 20px 0 20px 10px;
+  border-bottom: 1px solid #383e45;
+}
+
+#News dd{
+  width:80%;
+  padding: 20px 0 20px 40px;
+  border-bottom: 1px solid #383e45;
+}
+@media screen and (max-width: 600px) {
+  #News dt{
+    width:100%;
+    padding: 10px 0 0 10px;
+    border-bottom: none;
+  }
+  
+  #News dd{
+    width:100%;
+    padding: 0 0 10px 15px;
+  }
+}
+/*-------------------------------------------
+Contact
+-------------------------------------------*/
+#Contact dl{
+  display: flex;
+  flex-wrap:wrap;
+  text-align: left;
+}
+#Contact dt{
+  width:15%;
+  padding:12px 0px;
+  margin:8px 0;
+}
+#Contact dd{
+  width:85%;
+}
+#Contact input{
+  border: 1px solid rgba(128, 128, 128, 0.612);
+  width:100%;
+  padding:12px 20px;
+  margin:8px 0;
+}
+#Contact textarea{
+  border: 1px solid rgba(128, 128, 128, 0.612);
+  width:100%;
+  padding:12px 20px 100px 20px;
+  margin:8px 0;
+}
+#Contact a{
+  display: inline-block;
+  width:200px;
+  align-items: center;
+  padding:20px 40px;
+  margin-top:20px;
+  background-color:black;
+  color: white;
+  border: 1px solid black; 
+}
+#Contact a:hover{
+  background-color:white;
+  color: black;
+
+}
+@media screen and (max-width: 600px) {
+  #Contact dt{
+    width:100%;
+    padding:0px 0px;
+    margin: 8px 0 0 0;
+  }
+  #Contact dd{
+    width:100%;
+  }  
+  #Contact textarea, #Contact input{
+    margin:1px 0 0 0;
+  }
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+  background-color:black;
+  color: white;
+  font-size: 0.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+  #mainvisual img {
+    height: calc(100vh - 60px);
+  }
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about .content {
+    flex-direction: column;
+  }
+  #about img {
+    margin-right: 0;
+  }
+
+  /*-------------------------------------------
+  Bicycle
+  -------------------------------------------*/
+  #bicycle ul {
+    flex-direction: column;
+  }
+  #bicycle li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
